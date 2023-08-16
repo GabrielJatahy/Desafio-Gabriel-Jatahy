@@ -12,7 +12,7 @@ class CaixaDaLanchonete {
     };
 
     
-    this.formasDePagamento = ['dinheiro', 'debito', 'credito'];
+    this.formasDePagamento = ["dinheiro", "debito", "credito"];
   }
    
   calcularValorDaCompra(formaDePagamento, itens) {
@@ -28,12 +28,6 @@ class CaixaDaLanchonete {
       return 'Forma de pagamento inválida!';
     }
     
-    if (itens.includes("chantily") && !itens.includes("cafe")) {
-
-        return "Item extra não pode ser pedido sem o principal";
-
-    }
-
     let valorTotal = 0;
 
     var itensDoPedido = []
