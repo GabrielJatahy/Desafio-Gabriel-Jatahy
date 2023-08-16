@@ -14,7 +14,7 @@ class CaixaDaLanchonete {
     // Opções de pagamento disponíveis.
     this.formasDePagamento = ['dinheiro', 'debito', 'credito'];
   }
-
+   //confere se a intens no carrinho
   calcularValorDaCompra(formaDePagamento, itens) {
 
     if (itens.length === 0) {
@@ -27,7 +27,7 @@ class CaixaDaLanchonete {
     if (!this.formasDePagamento.includes(formaDePagamento)) {
       return 'Forma de pagamento inválida!';
     }
-
+    // Confere itens extras
     if (itens.includes("chantily") && !itens.includes("cafe")) {
 
         return "Item extra não pode ser pedido sem o principal";
@@ -37,16 +37,16 @@ class CaixaDaLanchonete {
     let valorTotal = 0;
 
     var itensDoPedido = []
-
+    
     for (const item of itens) {
       const [codigo, quantidade] = item.split(',');
 
         itensDoPedido.push (codigo)
-
+      // Confere quantidade de itens
         if (parseInt(quantidade) === 0){
         return "Quantidade inválida!" 
     }
-
+      // Confere se item esta no cardapio
         if (this.cardapio[codigo] === undefined) {
         return 'Item inválido!';
     }
@@ -74,7 +74,7 @@ class CaixaDaLanchonete {
     const valorFormatado = this.formatarValorParaString(valorTotal);
     return valorFormatado;
   }
-
+   
   formatarValorParaString(valor) {
     const valorFormatado = valor.toFixed(2).replace('.', ',');
     return `R$ ${valorFormatado}`;
