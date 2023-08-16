@@ -51,7 +51,6 @@ class CaixaDaLanchonete {
         return 'Item inválido!';
     }
 
-
       const precoItem = this.cardapio[codigo];
       valorTotal += precoItem * quantidade;
     }
@@ -67,7 +66,7 @@ class CaixaDaLanchonete {
     if ((itensDoPedido.includes("chantily") && !itensDoPedido.includes("cafe"))  
     || (itensDoPedido.includes("queijo") && !itensDoPedido.includes("sanduiche"))) {
 
-        return "Item extra não pode ser pedido sem o principal";
+     return "Item extra não pode ser pedido sem o principal";
 
     }
 
