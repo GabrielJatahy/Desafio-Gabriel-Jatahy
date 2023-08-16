@@ -1,3 +1,47 @@
+# Caixa de Lanchonete-Gabriel Jatahy
+
+## Descrição
+
+Este é um projeto desenvolvido como parte do programa de estágio STAR DB. A finalidade é fornecer uma solução para o caixa de uma lanchonete, permitindo opções de pagamento e retornos corretos para diferentes situações.
+
+## Uso
+
+O projeto foi criado para auxiliar na venda de produtos em um cardápio de lanchonete, com itens que podem ser considerados extras e só podem ser vendidos em conjunto com os itens principais. Isso simplifica o processo de cobrança e gestão do caixa, tornando-o automático e mais eficiente.
+
+## Exemplo Prático
+
+Para ilustrar o funcionamento do projeto, consideremos um exemplo com um café, que custa R$ 3.00. O cliente tem as seguintes opções de pagamento:
+
+- **Débito:** Não há desconto ou acréscimo.
+- **Crédito:** Haverá um acréscimo de 3% sobre o valor final.
+- **Dinheiro:** O cliente receberá um desconto de 5% no valor total do pedido.
+
+Além disso, o cardápio inclui algumas opções especiais que são consideradas adicionais e só podem ser vendidas junto com seus itens principais. Por exemplo:
+- O chantilly só pode ser vendido como complemento do café.
+- O queijo só pode ser vendido como complemento do sanduíche.
+
+## Como Usar
+
+1. Clone este repositório: `git clone https://github.com/seu-usuario/caixa-de-lanchonete.git`
+2. Acesse o diretório do projeto: `cd caixa-de-lanchonete`
+3. Instale as dependências: `npm install` ou `yarn install`
+4. Execute o projeto: `npm start` ou `yarn start`
+
+## Contribuição
+
+Se você deseja contribuir com o projeto, siga os passos abaixo:
+
+1. Faça um fork deste repositório.
+2. Crie uma branch para a sua feature: `git checkout -b minha-feature`
+3. Faça suas alterações e commit: `git commit -m "Minha nova feature"`
+4. Faça push para a branch: `git push origin minha-feature`
+5. Abra um Pull Request neste repositório.
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
+Seu Nome - gabriel_jatahy@live.com
+
 # CAIXA DA LANCHONETE
 
 ## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?

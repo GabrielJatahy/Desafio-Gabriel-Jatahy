@@ -11,10 +11,10 @@ class CaixaDaLanchonete {
       combo2: 7.50,
     };
 
-    // Opções de pagamento disponíveis.
+    
     this.formasDePagamento = ['dinheiro', 'debito', 'credito'];
   }
-   //confere se a intens no carrinho
+   
   calcularValorDaCompra(formaDePagamento, itens) {
 
     if (itens.length === 0) {
@@ -23,11 +23,11 @@ class CaixaDaLanchonete {
 
     }
 
-    // Verificar forma de pagamento.
+    
     if (!this.formasDePagamento.includes(formaDePagamento)) {
       return 'Forma de pagamento inválida!';
     }
-    // Confere itens extras
+    
     if (itens.includes("chantily") && !itens.includes("cafe")) {
 
         return "Item extra não pode ser pedido sem o principal";
@@ -42,11 +42,11 @@ class CaixaDaLanchonete {
       const [codigo, quantidade] = item.split(',');
 
         itensDoPedido.push (codigo)
-      // Confere quantidade de itens
+      
         if (parseInt(quantidade) === 0){
         return "Quantidade inválida!" 
     }
-      // Confere se item esta no cardapio
+     
         if (this.cardapio[codigo] === undefined) {
         return 'Item inválido!';
     }
@@ -55,14 +55,12 @@ class CaixaDaLanchonete {
       valorTotal += precoItem * quantidade;
     }
 
-    // Metodo para aplicar desconto/acréscimo.
     if (formaDePagamento === 'dinheiro') {
       valorTotal *= 0.95; // 5% de desconto.
     } else if (formaDePagamento === 'credito') {
       valorTotal *= 1.03; // 3% de acréscimo.
     }
 
-    // Ferifica se no pedido há um item extra sem o principal.
     if ((itensDoPedido.includes("chantily") && !itensDoPedido.includes("cafe"))  
     || (itensDoPedido.includes("queijo") && !itensDoPedido.includes("sanduiche"))) {
 
@@ -70,7 +68,6 @@ class CaixaDaLanchonete {
 
     }
 
-    // Formatar e retornar o valor.
     const valorFormatado = this.formatarValorParaString(valorTotal);
     return valorFormatado;
   }
